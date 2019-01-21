@@ -18,6 +18,22 @@ class ProspectsController < ApplicationController
         @prospect = Prospect.find(params[:id])    
     end
     
+    def edit
+        @prospect = Prospect.find(params[:id])    
+    end    
+    
+    def update
+        @prospect = Prospect.find(params[:id])
+        
+        if @prospect.update(prospect_params)
+            flash[:notice] = "Prospect was successfully updated!"
+            redirect_to prospect_path(@prospect)
+        else
+            render 'edit'
+        end        
+        
+    end
+    
     private
     
     def prospect_params

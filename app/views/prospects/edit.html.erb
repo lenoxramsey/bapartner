@@ -1,0 +1,84 @@
+<h1>Add a Prospect</h1>
+
+<% if @prospect.errors.any? %>
+    <p>The following errors prevented your prospect from saving:</p>
+    <ul>
+        <% @prospect.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+
+<% end %>
+
+<%= form_for @prospect do |f| %>
+<h2>Contact</h2>
+
+<p>
+    <%= f.label "Committee name" %>
+    <%= f.text_field :committeename %>
+</p>
+
+<p>
+    <%= f.label "Email" %>
+    <%= f.text_field :contactemail %>
+</p>
+
+<p>
+    <%= f.label "Phone" %>
+    <%= f.text_field :contactphone %>
+</p>
+
+<p>
+    <%= f.label "Contact" %>
+    <%= f.text_field :contactfirst %> <br />
+    <%= f.text_field :contactlast %>
+</p>
+
+<p>
+    <%= f.label "Title" %>
+    <%= f.text_field :contacttitle %>
+</p>
+
+<hr>
+
+<h2>Billing</h2>
+
+<p>
+    <%= f.label "Address line 1 " %>
+    <%= f.text_field :billingstreetone %>
+</p>
+
+<p>
+    <%= f.label "Address line 2 " %>
+    <%= f.text_field :billingstreettwo %>
+</p>
+
+<p>
+    <%= f.label "City " %>
+    <%= f.text_field :billingcity %>
+</p>
+
+<p>
+    <%= f.label "State " %>
+    <%= f.text_field :billingstate %>
+</p>
+
+<p>
+    <%= f.label "Zip code " %>
+    <%= f.text_field :billingzip %>
+</p>
+
+<hr>
+
+<h3>More</h3>
+
+<p>
+    <%= f.label "Website " %>
+    <%= f.text_field :committeeurl %>
+</p>
+
+<p>
+    <%= f.submit "Save" %>
+</p>
+
+<% end %>
