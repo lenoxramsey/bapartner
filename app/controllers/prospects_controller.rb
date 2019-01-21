@@ -1,4 +1,6 @@
 class ProspectsController < ApplicationController
+    before_action :set_prospect, only: [:edit, :update, :show,:destroy]
+    
     def index
        @prospects = Prospect.all 
     end
@@ -19,15 +21,15 @@ class ProspectsController < ApplicationController
     end
     
     def show
-        @prospect = Prospect.find(params[:id])    
+
     end
     
     def edit
-        @prospect = Prospect.find(params[:id])    
+
     end    
     
     def update
-        @prospect = Prospect.find(params[:id])
+        
         
         if @prospect.update(prospect_params)
             flash[:notice] = "Successfully saved prospect!"
@@ -39,13 +41,17 @@ class ProspectsController < ApplicationController
     end
     
     def destroy
-        @prospect = Prospect.find(params[:id])
+        
         @prospect.destroy
         flash[:notice] = "Prospect was removed!"
         redirect_to prospects_path
     end
     
     private
+    
+    def set_prospect
+        @prospect = Prospect.find(params[:id])
+    end
     
     def prospect_params
        params.require(:prospect).permit(:committeename, :contactemail, :contactphone, :contactfirst, :contactlast, :contacttitle, :billingstreetone, :billingstreettwo, :billingcity, :billingstate, :billingzip, :committeeurl) 
