@@ -11,8 +11,8 @@ class ProspectsController < ApplicationController
        @prospect = Prospect.new(prospect_params) 
        
         if @prospect.save
-            flash[:notice] = "Prospect was added successfully!"
-            redirect_to prospect_path(@prospect)
+            flash[:notice] = "Successfully saved prospect!"
+            redirect_to prospects_path
         else
             render 'new'
         end
@@ -30,8 +30,8 @@ class ProspectsController < ApplicationController
         @prospect = Prospect.find(params[:id])
         
         if @prospect.update(prospect_params)
-            flash[:notice] = "Prospect was successfully updated!"
-            redirect_to prospect_path(@prospect)
+            flash[:notice] = "Successfully saved prospect!"
+            redirect_to prospects_path
         else
             render 'edit'
         end        
@@ -41,7 +41,7 @@ class ProspectsController < ApplicationController
     def destroy
         @prospect = Prospect.find(params[:id])
         @prospect.destroy
-        flash[:notice] = "Prospect was successfully deleted!"
+        flash[:notice] = "Prospect was removed!"
         redirect_to prospects_path
     end
     
