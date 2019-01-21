@@ -38,6 +38,13 @@ class ProspectsController < ApplicationController
         
     end
     
+    def destroy
+        @prospect = Prospect.find(params[:id])
+        @prospect.destroy
+        flash[:notice] = "Prospect was successfully deleted!"
+        redirect_to prospects_path
+    end
+    
     private
     
     def prospect_params
