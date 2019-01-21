@@ -1,0 +1,25 @@
+<h1>Prospects</h1>
+
+<p>
+    <%= link_to "Add a Prospect", new_prospect_path %>
+</p>
+
+<table>
+    <tr>
+        <th>Committee Name</th>
+        <th>Contact Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <% @prospects.each do |prospect| %>
+        <tr>
+            <td><%= prospect.committeename %></td>
+            <td><%= prospect.contactfirst %> <%= prospect.contactlast %></td>
+            <td><%= prospect.contactemail %></td>
+            <td><%= prospect.contactphone %></td>
+            <td><%= link_to "Edit", edit_prospect_path(prospect) %></td>
+            <td><%= link_to "Show", prospect_path(prospect) %></td>
+            <td><%#= link_to "Delete", destroy_prospect_path %></td>
+        </tr>
+    <% end %>
+</table>

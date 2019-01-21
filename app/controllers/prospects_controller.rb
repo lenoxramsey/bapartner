@@ -1,4 +1,8 @@
 class ProspectsController < ApplicationController
+    def index
+       @prospects = Prospect.all 
+    end
+    
     def new
        @prospect = Prospect.new 
     end

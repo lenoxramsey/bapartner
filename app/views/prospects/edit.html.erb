@@ -1,4 +1,4 @@
-<h1>Add a Prospect</h1>
+<h1>Edit a Prospect</h1>
 
 <% if @prospect.errors.any? %>
     <p>The following errors prevented your prospect from saving:</p>
@@ -82,3 +82,7 @@
 </p>
 
 <% end %>
+
+<p>
+    <%= link_to "Back to Prospects", prospects_path %>    
+</p>
