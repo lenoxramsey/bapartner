@@ -1,0 +1,54 @@
+<h1>Prospect Information</h1>
+
+<p>
+    Committee name: <%= @prospect.committeename %>
+</p>
+
+<p>
+    Email: <%= @prospect.contactemail %>
+</p>
+
+<p>
+    Phone: <%= @prospect.contactphone %>
+</p>
+
+<p>
+    Contact: <%= @prospect.contactfirst %> <br />
+    <%= @prospect.contactlast %>
+</p>
+
+<p>
+    Title: <%= @prospect.contacttitle %>
+</p>
+
+<hr>
+
+<h2>Billing</h2>
+
+<p>
+    Address line 1: <%= @prospect.billingstreetone %>
+</p>
+
+<p>
+    Address line 2: <%= @prospect.billingstreettwo %>
+</p>
+
+<p>
+    City: <%= @prospect.billingcity %>
+</p>
+
+<p>
+    State: <%= @prospect.billingstate %>
+</p>
+
+<p>
+    Zip code: <%= @prospect.billingzip %>
+</p>
+
+<hr>
+
+<h2>More</h2>
+
+<p>
+    Website: <%= @prospect.committeeurl %>
+</p>
