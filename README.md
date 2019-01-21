@@ -15,4 +15,3 @@ website url - committee url
 -----
 Optional data for future updates
 saved payment method - committee saved payment key for stripe (optional)
-# bapartner
