@@ -1,4 +1,5 @@
 class ProspectsController < ApplicationController
+    before_action :authenticate_user!
     before_action :set_prospect, only: [:edit, :update, :show,:destroy]
     
     def index
