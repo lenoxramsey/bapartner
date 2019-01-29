@@ -1,0 +1,53 @@
+// SASS codes
+$ba-blue: #CEE8FA;
+$ba-darkblue: #034D84;
+
+//@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// App styling
+body {
+  background-color: $ba-blue;
+}
+
+
+//Navbar styling
+nav.navbar.navbar-expand-lg.navbar-white.bg-white {
+    height: 60px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+a.nav-link {
+    color: $ba-darkblue;
+}
+
+
+// User Authentication styling
+.btn-bablue {
+    background-color: #034D84;
+    color: white;
+}
+
+.login-container {
+  max-width: 420px;
+  margin: auto;
+  padding-top: 6%;
+}
+
+.field, .headlogo {
+    padding-bottom: 10px;
+}
+
+
+// Homepage styling
+.header-ui {
+    height: 540px;
+}
+
+
+// Footer styling
+.footerb {
+    height: 290px;
+    background-color: $ba-darkblue;
+}

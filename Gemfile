@@ -7,6 +7,8 @@ ruby '2.4.0'
 gem 'rails', '~> 5.2.2'
 # Use Devise for User Authentication
 gem 'devise'
+# Use Hellosign SDK for document signing via Hellosign API
+gem 'hellosign-ruby-sdk'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
