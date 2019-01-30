@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_22_000755) do
+ActiveRecord::Schema.define(version: 2019_01_29_100301) do
 
   create_table "prospects", force: :cascade do |t|
     t.string "committeename"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 2019_01_22_000755) do
     t.string "billingzip"
     t.string "committeeurl"
     t.string "contacttitle"
+    t.integer "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
